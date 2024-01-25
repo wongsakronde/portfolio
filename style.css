@@ -1,0 +1,40 @@
+@font-face {
+    font-family: Kanit-Light;
+    src: url(./Kanit/Kanit-Light.ttf);
+}
+
+body {
+    font-family: Kanit-Light;
+    background-color: #020f1b;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:active {
+    text-decoration: none;
+    color: white;
+}
+
+.font20 {
+    font-size: 20px;
+}
+
+
+header {
+    margin: auto;
+    height: 450px;
+    width: 700px;
+
+}
+
+header>div {
+    display: flex;
+}
+
+.nav_bar {
+    flex-direction: row;
+    justify-content: space-between;
+}
