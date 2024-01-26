@@ -17,9 +17,65 @@ body {
     background-color: #020f1b;
 }
 
+#profile_text_showup {
+    display: flex;
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    animation: 4s fadeout 1s forwards;
+}
+
+.Fullname_text {
+    line-height: 40px;
+    padding: 10px;
+    overflow: hidden;
+    opacity: 0;
+    animation: 0.5s showup 1s linear forwards;
+}
+
+.Portfolio_text {
+    opacity: 0;
+    animation: 1s slideIn 1s linear forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-30%);
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    95% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+
+}
+
 a {
     text-decoration: none;
     color: white;
+    padding: 10px;
 }
 
 a:active {
@@ -33,10 +89,10 @@ a:active {
 
 
 header {
-    margin: auto;
+    margin-left: 80px;
     height: 450px;
     width: 700px;
-    padding: 10px 0;
+    padding: 50px 0;
 }
 
 header>div {
@@ -45,38 +101,42 @@ header>div {
 
 .nav_bar {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     padding: 10px;
+    margin-top: 28px;
     transform: translate(0px 100px);
-    animation: showup 2s 1;
+    animation: 6s showup 2s 1 forwards;
+    opacity: 0;
 }
 
 #logo {
     position: absolute;
-    font-size: 30px;
-    margin: 0 10px;
-    transform: translate(30px, 10px);
+    font-size: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Kanit-Bold;
     border: 2px solid white;
-    width: 45px;
-    height: 45px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     color: white;
 
-    overflow: hidden;
-    white-space: nowrap;
-    animation: showup 2s 1;
+    opacity: 0;
+    animation: 6s showup 2s 1 forwards;
 }
 
 @keyframes showup {
-    from {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
         opacity: 0;
     }
 
     to {
         opacity: 1;
+        z-index: 1;
     }
 }
